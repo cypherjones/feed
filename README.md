@@ -9,13 +9,13 @@ We used Jasmine to test this demo app.
 - [http-server](https://www.npmjs.com/package/http-server)
 
 ### How to run
-**Locally in your browser
+** Locally in your browser
 - Clone this repo to a directory of your choosing on your computer
 - Open the directory where you downloaded the repo
 - Double click on the `index.html` file to open in your default brower or right click to choose which browser you'd like the file to open
 - Then scroll down to the bottom of the page to see "speces, failures"
 
-**Locally with Node.js
+** Locally with Node.js
 - Make sure you have Node.js installed
 - Clone this repo to a directory of your choosing on your computer
 - To quickly create a "server" on your machine, you'll want to install http-server
