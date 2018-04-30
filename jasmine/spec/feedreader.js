@@ -34,11 +34,12 @@ $(function() {
          it('url should be defined', function(){
 
             for (var f = 0; f < allFeeds.length; f++) {
-                expect(allFeeds[f].url).toBeDefined();
-                expect(allFeeds[f].url).not.toBe(0);
-            }
 
-         })
+                expect(allFeeds[f].url).toBeDefined();
+                expect(allFeeds[f].url.length).not.toBe(0);
+
+            }
+         });
 
 
         /* TODO: Write a test that loops through each feed
@@ -48,14 +49,10 @@ $(function() {
          it('name should be defined', function(){
             for (var f = 0; f < allFeeds.length; f++) {
                 expect(allFeeds[f].name).toBeDefined();
-                expect(allFeeds[f].name).not.toBe(0);
+                expect(allFeeds[f].name.length).not.toBe(0);
             }
          });
-
     });
-
-
-    /* TODO: Write a new test suite named "The menu" */
 
     describe('The menu', function(){
 
@@ -68,7 +65,7 @@ $(function() {
 
             var slickRick = $('body').hasClass('menu-hidden');
 
-            expect(slickRick).toBeTruthy();
+            expect(slickRick).toBe(true);
          });
 
          /* TODO: Write a test that ensures the menu changes
@@ -83,10 +80,7 @@ $(function() {
             $('.menu-icon-link').trigger('click');
             expect($('body').hasClass('menu-hidden')).toBe(true);
          }) 
-
     });
-
-    /* TODO: Write a new test suite named "Initial Entries" */
 
     describe('Intial Entries', function(){
 
@@ -103,10 +97,7 @@ $(function() {
          it('should be finished, man', function() {
             var feed = $('.feed .entry').length;
             expect(feed).toBeGreaterThan(0);
-        });
-         
-
-
+        }); 
     });
 
     /* TODO: Write a new test suite named "New Feed Selection" */
@@ -120,7 +111,7 @@ $(function() {
 
          beforeAll(function(done) {
             loadFeed(0, function(){
-                var firstFeed = $('.feed').html();
+                firstFeed = $('.feed').html();
                 loadFeed(1, done);    
             });
          });
@@ -129,8 +120,5 @@ $(function() {
             expect($('.feed').html()).not.toBe(firstFeed);
 
         });
-
     })
-
-       
 }());
